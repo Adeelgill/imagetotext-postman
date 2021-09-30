@@ -1,6 +1,6 @@
-# imagetotext.io API Postman Collection
+# <a href="https://www.imagetotext.io/">imagetotext.io</a> API Postman Collection
 
-This is a postman collection covering the imagetotext.io API. See <a href="https://www.imagetotext.io/docs">imagetotext.io/docs</a> for more details.
+This is a postman collection covering the <a href="https://www.imagetotext.io/">imagetotext.io</a> API. See <a href="https://www.imagetotext.io/docs">imagetotext.io/docs</a> for more details.
 
 
 
