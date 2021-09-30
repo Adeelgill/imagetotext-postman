@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "2a0b442c-2000-446e-92e4-93d110d11fcf",
+		"name": "Imagetotext.io API",
+		"description": "# imagetotext.io API Postman Collection\n\nThis is a postman collection covering the imagetotext.io API. See <a href=\"https://www.imagetotext.io/docs\">imagetotext.io/docs</a> for more details.\n\n\n\n## Prerequisites\n- <a href=\"https://www.getpostman.com/downloads/\">Download</a> Postman\n- Imagetotext.io account <a href=\"https://www.imagetotext.io/register\">link</a>\n### Generate auth token\n- Get register to website <a href=\"https://www.imagetotext.io/register\">here</a>\n- Go to <a href=\"https://www.imagetotext.io/user/api-tokens\">Token Manager</a> and generate your auth token.\n### Set Authorization token in ENV\n- token in your <a href=\"https://learning.postman.com/docs/sending-requests/variables/\">enviornemnt variable</a>\n- Use that token as header with you postman `Authorization: Bearer {YOUR_API_TOKEN}`\n\n## That's all set to use free image to text converter api.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUserInfo Fectch infromation about current user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URL}}/getUserInfo",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"getUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conversion/getListing Fectch all previous with pagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URL}}/conversion/getListing",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"conversion",
+						"getListing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conversion/getListing Fectch all previous with pagination Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{API_AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "JPG, PNG, JPEG, BMP, GIF, TIFF",
+							"type": "file",
+							"src": "/C:/Users/adeel/Downloads/Screenshot_4.png"
+						},
+						{
+							"key": "language",
+							"value": "eng",
+							"description": "\"eng\", \"afr\", \"amh\", \"ara\", \"asm\", \"aze\", \"aze_cyrl\", \"bel\", \"ben\", \"bod\", \"bos\", \"bul\", \"cat\", \"ceb\", \"ces\", \"chi_sim\", \"chi_tra\", \"chr\", \"cym\", \"dan\", \"deu\", \"dzo\", \"ell\", \"enm\", \"epo\", \"est\", \"eus\", \"fas\", \"fin\", \"fra\", \"frk\", \"frm\", \"gle\", \"glg\", \"grc\", \"guj\", \"hat\", \"heb\", \"hin\", \"hrv\", \"hun\", \"iku\", \"ind\", \"isl\", \"ita\", \"ita_old\", \"jav\", \"jpn\", \"kan\", \"kat\", \"kat_old\", \"kaz\", \"khm\", \"kir\", \"kor\", \"kur\", \"lao\", \"lat\", \"lav\", \"lit\", \"mal\", \"mar\", \"mkd\", \"mlt\", \"msa\", \"mya\", \"nep\", \"nld\", \"nor\", \"ori\", \"pan\", \"pol\", \"por\", \"pus\", \"ron\", \"rus\", \"san\", \"sin\", \"slk\", \"slv\", \"spa\", \"spa_old\", \"sqi\", \"srp\", \"srp\", \"swa\", \"swe\", \"syr\", \"tam\", \"tel\", \"tgk\", \"tgl\", \"tha\", \"tir\", \"tur\", \"uig\", \"ukr\", \"urd\", \"uzb\", \"uzb_cyrl\", \"vie\", \"yid\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_URL}}/conversion/getImageText",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"conversion",
+						"getImageText"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "API_URL"
+		}
+	]
+}
